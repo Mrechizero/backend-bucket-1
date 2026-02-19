@@ -4,8 +4,7 @@ import boto3
 import os
 from dotenv import load_dotenv
 
-load_dotenv(dotenv_path=r"C:\Users\User\Documents\Desarrollo\bucket-pruebas\backend\.env")
-
+load_dotenv()
 app = FastAPI()
 
 # 🔓 CONFIGURAR CORS
