@@ -66,17 +66,23 @@ S3_ENDPOINT_URL=https://your-storage-endpoint.com  # optional
 - **🖥️ Local Development
 - **1️⃣ Clone repository
 git clone https://github.com/yourusername/bucket-app.git
+
 cd bucket-app
 
 - **2️⃣ Create virtual environment
+- 
 python -m venv venv
+
 source venv/bin/activate   # Linux/Mac
+
 venv\Scripts\activate      # Windows
 
 - **3️⃣ Install dependencies
+- 
 pip install -r requirements.txt
 
 - **4️⃣ Run application
+- 
 uvicorn main:app --reload
 
 API available at:
@@ -94,6 +100,7 @@ Swagger Docs:
 cd /opt/apps/backend-bucket-1
 
 sudo docker compose down
+
 sudo docker compose build --no-cache
 sudo docker compose up -d
 
@@ -108,7 +115,8 @@ Check logs:
 
 docker logs -f backend-bucket-1
 
-Test locally on server:
+
+- **Test locally on server:
 
 curl http://localhost:8000
 
@@ -118,17 +126,27 @@ http://192.168.0.97:8000
 
 
 - **🔄 Updating the Application
+- 
 cd /opt/apps/backend-bucket-1
+-
 git pull
 
 sudo docker compose down
+-
 sudo docker compose build --no-cache
+
 sudo docker compose up -d
-📡 API Endpoints
+
+- **📡 API Endpoints
+- 
 Method	Endpoint	Description
+
 POST	/upload	Upload file
+
 GET	/files	List files
+
 GET	/download/{id}	Download file
+
 DELETE	/delete/{id}	Delete file
 
 
@@ -142,15 +160,20 @@ origins = [
     "http://localhost:3000",
     "http://192.168.0.97:3000"
 ]
-🧪 Example Upload (cURL)
+- **🧪 Example Upload (cURL)
+- 
 curl -X POST "http://127.0.0.1:8000/upload" \
+
 -H "Content-Type: multipart/form-data" \
+
 -F "file=@example.pdf"
-📊 Monitoring & Maintenance
+
+- **📊 Monitoring & Maintenance
 
 View container status:
 
 docker ps
+-
 docker ps -a
 
 Restart backend:
@@ -160,13 +183,16 @@ docker compose restart
 Check listening ports:
 
 ss -tulpn | grep 8000
-⚙️ Auto Start on Server Reboot (Alpine)
+
+- **⚙️ Auto Start on Server Reboot (Alpine)
 
 Enable Docker at boot:
 
 sudo rc-update add docker default
+
 sudo rc-service docker start
-📦 Deployment Targets
+
+- **📦 Deployment Targets
 
 Docker
 
