@@ -1,8 +1,12 @@
-🪣 Bucket App
+## Stack de Tecnología
+
+- **Framework:** [Next.js](https://nextjs.org/)
+
+##🪣 Bucket App
 
 A production-ready FastAPI backend for managing file uploads and storage using AWS S3 or S3-compatible services.
 
-🚀 Features
+- **🚀 Features
 
 Upload files to bucket
 
@@ -20,7 +24,8 @@ Environment-based configuration
 
 Docker deployment ready
 
-🏗️ Tech Stack
+
+- **🏗️ Tech Stack
 
 Backend: FastAPI
 
@@ -34,7 +39,8 @@ Environment Config: dotenv
 
 OS (Production): Alpine Linux
 
-📁 Project Structure
+
+- **📁 Project Structure
 bucket-app/
 │
 ├── main.py
@@ -46,16 +52,18 @@ bucket-app/
 ├── Dockerfile
 ├── docker-compose.yml
 └── README.md
-🔐 Environment Variables
 
-Create a .env file in the root directory:
+
+- **Create a .env file in the root directory:
 
 AWS_ACCESS_KEY_ID=your_access_key
 AWS_SECRET_ACCESS_KEY=your_secret_key
 AWS_REGION=us-east-1
 BUCKET_NAME=your_bucket_name
 S3_ENDPOINT_URL=https://your-storage-endpoint.com  # optional
-🖥️ Local Development
+
+
+- **🖥️ Local Development
 1️⃣ Clone repository
 git clone https://github.com/yourusername/bucket-app.git
 cd bucket-app
@@ -74,8 +82,9 @@ http://127.0.0.1:8000
 
 Swagger Docs:
 
-http://127.0.0.1:8000/docs
-🐳 Production Deployment (Docker - Alpine Server)
+- **http://127.0.0.1:8000/docs
+
+- **🐳 Production Deployment (Docker - Alpine Server)
 📁 Server Path
 /opt/apps/backend-bucket-1
 🔨 Build & Deploy
@@ -84,7 +93,9 @@ cd /opt/apps/backend-bucket-1
 sudo docker compose down
 sudo docker compose build --no-cache
 sudo docker compose up -d
-🔎 Verify Deployment
+
+
+- **🔎 Verify Deployment
 
 Check running containers:
 
@@ -101,7 +112,9 @@ curl http://localhost:8000
 Production URL (LAN example):
 
 http://192.168.0.97:8000
-🔄 Updating the Application
+
+
+- **🔄 Updating the Application
 cd /opt/apps/backend-bucket-1
 git pull
 
@@ -114,7 +127,9 @@ POST	/upload	Upload file
 GET	/files	List files
 GET	/download/{id}	Download file
 DELETE	/delete/{id}	Delete file
-🛡️ CORS Configuration
+
+
+- **🛡️ CORS Configuration
 
 CORS is enabled for frontend integration.
 
@@ -160,6 +175,6 @@ S3-compatible storage
 
 On-premise server
 
-📝 License
+- **📝 License
 
 MIT License
