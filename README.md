@@ -64,16 +64,19 @@ S3_ENDPOINT_URL=https://your-storage-endpoint.com  # optional
 
 
 - **🖥️ Local Development
-1️⃣ Clone repository
+- **1️⃣ Clone repository
 git clone https://github.com/yourusername/bucket-app.git
 cd bucket-app
-2️⃣ Create virtual environment
+
+- **2️⃣ Create virtual environment
 python -m venv venv
 source venv/bin/activate   # Linux/Mac
 venv\Scripts\activate      # Windows
-3️⃣ Install dependencies
+
+- **3️⃣ Install dependencies
 pip install -r requirements.txt
-4️⃣ Run application
+
+- **4️⃣ Run application
 uvicorn main:app --reload
 
 API available at:
